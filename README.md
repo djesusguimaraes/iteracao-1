@@ -10,3 +10,4 @@ Grupo:
 * Edmundo Paulino
 * Daniel Guimarães
 * Ítalo Vilarino
+* Marcos Antônio 
