@@ -7,7 +7,7 @@ Grupo:
 
 * Fábio Viegas
 * Gustavo Casaes
-* Edmundo Paulino
+* Edmundo Paulino👍👍👍
 * Daniel Guimarães
 * Ítalo Vilarino
 * Marcos Antônio 
