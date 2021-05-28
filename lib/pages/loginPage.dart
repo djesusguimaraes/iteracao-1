@@ -8,9 +8,9 @@ class LoginPage extends StatelessWidget {
         // Configura distância das bordas
         padding: EdgeInsets.only(
           top: 70,
-          right: 50,
+          right: 40,
           bottom: 30,
-          left: 50,
+          left: 40,
         ),
         // Cor de Fundo
         color: Colors.white,
@@ -65,6 +65,28 @@ class LoginPage extends StatelessWidget {
               style: TextStyle(
                 color: Colors.black87,
                 fontSize: 18,
+              ),
+            ),
+            // Botão de Recuperação de Senha
+            Container(
+              height: 25,
+              alignment: Alignment.centerRight,
+              child: FlatButton(
+                child: Text("Recuperar Senha"),
+                onPressed: () {},
+              ),
+            ),
+            SizedBox(height: 50),
+            // Submit
+            Container(
+              height: 40,
+              color: Colors.black,
+              child: SizedBox.expand(
+                child: FlatButton(
+                  textColor: Colors.white,
+                  child: Text("Login"),
+                  onPressed: () {},
+                ),
               ),
             ),
           ],

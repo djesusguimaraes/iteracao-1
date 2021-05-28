@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
       title: 'Grades',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.teal,
+        primarySwatch: Colors.grey,
       ),
       home: LoginPage(),
     );
