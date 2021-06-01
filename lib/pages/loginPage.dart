@@ -1,3 +1,6 @@
+import 'dart:html';
+
+import 'package:app/pages/registerPage.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -16,7 +19,7 @@ class LoginPage extends StatelessWidget {
         color: Colors.white,
         // Conjunto de Elementos em Lista (Coluna)
         child: ListView(
-          children: [
+          children: <Widget>[
             SizedBox(
               width: 128,
               height: 128,
@@ -43,7 +46,6 @@ class LoginPage extends StatelessWidget {
                 color: Colors.black,
                 fontSize: 18,
               ),
-              strutStyle: StrutStyle(),
             ),
             SizedBox(height: 20),
             // Caixa de Senha
@@ -71,8 +73,14 @@ class LoginPage extends StatelessWidget {
             Container(
               height: 25,
               alignment: Alignment.centerRight,
-              child: FlatButton(
-                child: Text("Recuperar Senha"),
+              child: TextButton(
+                child: Text(
+                  "Recuperar Senha",
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black87,
+                  ),
+                ),
                 onPressed: () {},
               ),
             ),
@@ -80,13 +88,30 @@ class LoginPage extends StatelessWidget {
             // Submit
             Container(
               height: 40,
-              color: Colors.black,
               child: SizedBox.expand(
-                child: FlatButton(
-                  textColor: Colors.white,
-                  child: Text("Login"),
+                child: ElevatedButton(
+                  child: Text(
+                    "Login",
+                    style: TextStyle(color: Colors.white),
+                  ),
                   onPressed: () {},
                 ),
+              ),
+            ),
+            SizedBox(height: 15),
+            Container(
+              height: 25,
+              alignment: Alignment.center,
+              child: TextButton(
+                child: Text("Ainda não tem cadastro? Clique Aqui"),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RegisterPage(),
+                    ),
+                  );
+                },
               ),
             ),
           ],

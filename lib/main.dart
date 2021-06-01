@@ -58,6 +58,7 @@
 // }
 
 import 'package:app/pages/loginPage.dart';
+import 'package:app/pages/registerPage.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -69,7 +70,7 @@ class MyApp extends StatelessWidget {
       title: 'Grades',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.grey,
+        primarySwatch: Colors.blueGrey,
       ),
       home: LoginPage(),
     );
