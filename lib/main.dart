@@ -57,8 +57,8 @@
 //   }
 // }
 
-import 'package:app/views/loginPage.dart';
-import 'package:app/views/registerPage.dart';
+import 'package:app/views/login/login_page.dart';
+import 'package:app/views/register_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
