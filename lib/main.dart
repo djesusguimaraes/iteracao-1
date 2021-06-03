@@ -57,6 +57,7 @@
 //   }
 // }
 
+import 'package:app/views/lists/notes_list.dart';
 import 'package:app/views/login/login_page.dart';
 import 'package:app/views/register_page.dart';
 import 'package:flutter/material.dart';
@@ -72,7 +73,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: LoginPage(),
+      home: NotesList(),
     );
   }
 }
