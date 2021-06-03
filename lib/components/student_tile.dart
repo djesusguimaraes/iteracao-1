@@ -26,7 +26,7 @@ class StudentTile extends StatelessWidget {
               IconButton(
                 onPressed: () {},
                 icon: Icon(Icons.delete),
-                color: Colors.redAccent,
+                color: Colors.red,
               ),
             ],
           ),
