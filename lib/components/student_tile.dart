@@ -1,5 +1,5 @@
 import 'package:app/entities/student.dart';
-import 'package:app/views/register_page.dart';
+import 'package:app/views/register/register_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -24,10 +24,7 @@ class StudentTile extends StatelessWidget {
           children: <Widget>[
             IconButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => RegisterPage()),
-                );
+                Navigator.of(context).pushNamed('/edit');
               },
               icon: Icon(Icons.mode_edit_outlined),
             ),

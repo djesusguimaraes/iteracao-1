@@ -60,12 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
                     print("O email é: $_email\nE a senha é: $_password");
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => NotesList(),
-                      ),
-                    );
+                    Navigator.of(context).pushReplacementNamed('/home');
                   }
                 },
               ),

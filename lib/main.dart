@@ -1,4 +1,7 @@
+import 'package:app/views/edit/edit.dart';
+import 'package:app/views/lists/notes_list.dart';
 import 'package:app/views/login/login_page.dart';
+import 'package:app/views/register/register_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -12,7 +15,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: LoginPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginPage(),
+        '/home': (context) => NotesList(),
+        '/edit': (context) => EditPage(),
+        '/register': (context) => RegisterPage(),
+      },
     );
   }
 }
