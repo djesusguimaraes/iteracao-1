@@ -1,8 +1,3 @@
-import 'dart:html';
-import 'dart:ui';
-
-import 'package:app/entities/student.dart';
-import 'package:app/views/lists/notes_list.dart';
 import 'package:flutter/material.dart';
 
 class EditPage extends StatefulWidget {
@@ -45,13 +40,11 @@ class _EditPageState extends State<EditPage> {
               SizedBox(height: 20),
               TextFormField(
                 onSaved: (value) => _nota1 = value!,
-                obscureText: true,
                 decoration: InputDecoration(labelText: "Nota 1"),
               ),
               SizedBox(height: 20),
               TextFormField(
                 onSaved: (value) => _nota2 = value!,
-                obscureText: true,
                 decoration: InputDecoration(labelText: "Nota 2"),
               ),
               SizedBox(height: 40),
@@ -61,12 +54,7 @@ class _EditPageState extends State<EditPage> {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => NotesList(),
-                      ),
-                    );
+                    Navigator.of(context).pushReplacementNamed('/home');
                   }
                 },
               ),

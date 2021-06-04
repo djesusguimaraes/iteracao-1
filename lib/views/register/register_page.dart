@@ -1,8 +1,3 @@
-import 'dart:html';
-import 'dart:ui';
-
-import 'package:app/entities/student.dart';
-import 'package:app/views/lists/notes_list.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -22,7 +17,7 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Editar"),
+        title: Text("Registrar"),
       ),
       body: Container(
         alignment: Alignment.center,
@@ -31,7 +26,6 @@ class _RegisterPageState extends State<RegisterPage> {
           key: _formKey,
           child: ListView(
             children: [
-              Text("Aluno"),
               TextFormField(
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(labelText: "Nome"),
@@ -46,13 +40,13 @@ class _RegisterPageState extends State<RegisterPage> {
               TextFormField(
                 onSaved: (value) => _nota1 = value!,
                 obscureText: true,
-                decoration: InputDecoration(labelText: "Nota 1"),
+                decoration: InputDecoration(labelText: "Senha"),
               ),
               SizedBox(height: 20),
               TextFormField(
                 onSaved: (value) => _nota2 = value!,
                 obscureText: true,
-                decoration: InputDecoration(labelText: "Nota 2"),
+                decoration: InputDecoration(labelText: "Confirmação de Senha"),
               ),
               SizedBox(height: 40),
               ElevatedButton.icon(
@@ -61,12 +55,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => NotesList(),
-                      ),
-                    );
+                    Navigator.of(context).pushReplacementNamed('/home');
                   }
                 },
               ),

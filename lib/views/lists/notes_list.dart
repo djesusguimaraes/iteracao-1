@@ -17,7 +17,9 @@ class NotesList extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed('/register');
+          },
           backgroundColor: Colors.blueGrey[900]),
     );
   }

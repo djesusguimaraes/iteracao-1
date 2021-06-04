@@ -1,5 +1,4 @@
 import 'package:app/entities/student.dart';
-import 'package:app/views/register/register_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

@@ -1,7 +1,3 @@
-import 'dart:html';
-import 'dart:ui';
-
-import 'package:app/views/lists/notes_list.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
