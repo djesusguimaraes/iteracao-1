@@ -18,7 +18,7 @@ class NotesList extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: () {},
-          backgroundColor: Colors.black38),
+          backgroundColor: Colors.blueGrey[900]),
     );
   }
 }
