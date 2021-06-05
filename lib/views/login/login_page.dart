@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                     _formKey.currentState!.save();
                     // Aqui vai a decisão se é aluno ou professor para escolher a rota;
                     // ignore: unrelated_type_equality_checks
-                    Navigator.of(context).pushReplacementNamed('/note');
+                    Navigator.of(context).pushReplacementNamed('/home');
                   }
                 },
               ),
