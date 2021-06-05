@@ -10,8 +10,10 @@ class _RegisterPageState extends State<RegisterPage> {
 
   String _nome = '';
   String _email = '';
-  String _nota1 = '';
-  String _nota2 = '';
+  String _password = '';
+  String _passconf = '';
+  String nota_1 = '';
+  String nota_2 = '';
 
   @override
   Widget build(BuildContext context) {
@@ -38,13 +40,23 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               SizedBox(height: 20),
               TextFormField(
-                onSaved: (value) => _nota1 = value!,
+                onSaved: (value) => nota_1 = value!,
+                decoration: InputDecoration(labelText: "Nota 1"),
+              ),
+              SizedBox(height: 20),
+              TextFormField(
+                onSaved: (value) => nota_2 = value!,
+                decoration: InputDecoration(labelText: "Nota 2"),
+              ),
+              SizedBox(height: 20),
+              TextFormField(
+                onSaved: (value) => _password = value!,
                 obscureText: true,
                 decoration: InputDecoration(labelText: "Senha"),
               ),
               SizedBox(height: 20),
               TextFormField(
-                onSaved: (value) => _nota2 = value!,
+                onSaved: (value) => _passconf = value!,
                 obscureText: true,
                 decoration: InputDecoration(labelText: "Confirmação de Senha"),
               ),

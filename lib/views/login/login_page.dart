@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:app/data/dummy_teachers.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -7,6 +8,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
+  final _teachers = {...DUMMY_TEACHERS};
 
   String _password = '';
   String _email = '';
@@ -55,8 +57,9 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
-                    print("O email é: $_email\nE a senha é: $_password");
-                    Navigator.of(context).pushReplacementNamed('/home');
+                    // Aqui vai a decisão se é aluno ou professor para escolher a rota;
+                    // ignore: unrelated_type_equality_checks
+                    Navigator.of(context).pushReplacementNamed('/note');
                   }
                 },
               ),

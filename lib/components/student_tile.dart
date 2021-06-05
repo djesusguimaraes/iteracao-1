@@ -23,7 +23,7 @@ class StudentTile extends StatelessWidget {
           children: <Widget>[
             IconButton(
               onPressed: () {
-                Navigator.of(context).pushNamed('/edit');
+                Navigator.of(context).pushNamed('/register');
               },
               icon: Icon(Icons.mode_edit_outlined),
             ),
