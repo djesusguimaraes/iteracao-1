@@ -1,4 +1,4 @@
-import 'package:app/entities/student.dart';
+import 'package:grades/entities/student.dart';
 
 const DUMMY_STUDENTS = {
   '1': const Student(

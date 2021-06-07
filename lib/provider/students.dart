@@ -1,5 +1,5 @@
-import 'package:app/data/dummy_students.dart';
-import 'package:app/entities/student.dart';
+import 'package:grades/data/dummy_students.dart';
+import 'package:grades/entities/student.dart';
 import 'package:flutter/material.dart';
 
 class Users with ChangeNotifier {

@@ -1,4 +1,4 @@
-import 'package:app/entities/teacher.dart';
+import 'package:grades/entities/teacher.dart';
 
 const DUMMY_TEACHERS = {
   '1': const Teacher(

@@ -1,5 +1,5 @@
-import 'package:app/components/student_tile.dart';
-import 'package:app/provider/students.dart';
+import 'package:grades/components/student_tile.dart';
+import 'package:grades/provider/students.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

@@ -1,4 +1,4 @@
-import 'package:app/entities/student.dart';
+import 'package:grades/entities/student.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

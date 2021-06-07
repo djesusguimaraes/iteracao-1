@@ -1,8 +1,8 @@
-import 'package:app/components/student_note.dart';
-import 'package:app/views/lists/notes_list.dart';
-import 'package:app/views/login/login_page.dart';
-import 'package:app/views/register/register_page.dart';
-import 'package:app/provider/students.dart';
+import 'package:grades/components/student_note.dart';
+import 'package:grades/views/lists/notes_list.dart';
+import 'package:grades/views/login/login_page.dart';
+import 'package:grades/views/register/register_page.dart';
+import 'package:grades/provider/students.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
