@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:validadores/Validador.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
@@ -33,65 +32,33 @@ class _RegisterPageState extends State<RegisterPage> {
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(labelText: "Nome"),
                 onSaved: (value) => _nome = value!,
-                validator: (value) {
-                  return Validador()
-                      .add(Validar.OBRIGATORIO, msg: 'Campo Obrigatório')
-                      .valido(value, clearNoNumber: true);
-                },
               ),
               SizedBox(height: 20),
               TextFormField(
                 onSaved: (value) => _email = value!,
                 decoration: InputDecoration(labelText: "Email"),
-                validator: (value) {
-                  return Validador()
-                      .add(Validar.EMAIL, msg: 'Email Inválido')
-                      .valido(value, clearNoNumber: true);
-                },
               ),
               SizedBox(height: 20),
               TextFormField(
-                keyboardType: TextInputType.number,
                 onSaved: (value) => nota_1 = value!,
                 decoration: InputDecoration(labelText: "Nota 1"),
-                validator: (value) {
-                  return Validador()
-                      .add(Validar.OBRIGATORIO, msg: 'Campo Obrigatório')
-                      .valido(value, clearNoNumber: true);
-                },
               ),
               SizedBox(height: 20),
               TextFormField(
                 onSaved: (value) => nota_2 = value!,
                 decoration: InputDecoration(labelText: "Nota 2"),
-                validator: (value) {
-                  return Validador()
-                      .add(Validar.OBRIGATORIO, msg: 'Campo Obrigatório')
-                      .valido(value, clearNoNumber: true);
-                },
               ),
               SizedBox(height: 20),
               TextFormField(
                 onSaved: (value) => _password = value!,
                 obscureText: true,
                 decoration: InputDecoration(labelText: "Senha"),
-                validator: (value) {
-                  _password = value!;
-                  return Validador()
-                      .add(Validar.OBRIGATORIO, msg: 'Campo Obrigatório')
-                      .valido(value, clearNoNumber: true);
-                },
               ),
               SizedBox(height: 20),
               TextFormField(
                 onSaved: (value) => _passconf = value!,
                 obscureText: true,
                 decoration: InputDecoration(labelText: "Confirmação de Senha"),
-                validator: (value) {
-                  if (value != _password) {
-                    return 'Senhas não conferem';
-                  }
-                },
               ),
               SizedBox(height: 40),
               ElevatedButton.icon(

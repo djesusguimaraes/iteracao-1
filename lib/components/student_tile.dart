@@ -1,10 +1,10 @@
-import 'package:grades/entities/student.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:grades/entities/student.dart';
 
 class StudentTile extends StatelessWidget {
   final Student student;
-
   const StudentTile(this.student);
 
   @override
