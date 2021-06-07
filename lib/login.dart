@@ -138,7 +138,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       }
                     }
                     for (var index = 0; index < docsp.length; index++) {
-                      print(index);
                       if (docsp[index]['email'] == _email) {
                         if (docsp[index]['senha'] == _password) {
                           Navigator.of(context).pushReplacementNamed('/home');
