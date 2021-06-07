@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:grades/home.dart';
 
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:validadores/Validador.dart';
@@ -14,30 +13,38 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  late String _email, _password;
-  final auth = FirebaseAuth.instance;
   GlobalKey<FormState> _key = new GlobalKey();
+  late String _email, _password;
   late Database db;
+  final auth = FirebaseAuth.instance;
   List docs = [], docsp = [];
-  var index = 0;
+
   initialise() {
     db = Database();
     db.initiliase();
-    db.read().then((value) => {
-          setState(() {
-            docs = value;
-          })
-        });
+    db.read().then(
+          (value) => {
+            setState(
+              () {
+                docs = value;
+              },
+            )
+          },
+        );
   }
 
   initialisep() {
     db = Database();
     db.initiliase();
-    db.readp().then((dado) => {
-          setState(() {
-            docsp = dado;
-          })
-        });
+    db.readp().then(
+          (dado) => {
+            setState(
+              () {
+                docsp = dado;
+              },
+            )
+          },
+        );
   }
 
   @override
@@ -77,24 +84,31 @@ class _LoginScreenState extends State<LoginScreen> {
                       .valido(value, clearNoNumber: false);
                 },
                 onChanged: (value) {
-                  setState(() {
-                    _email = value.trim();
-                  });
+                  setState(
+                    () {
+                      _email = value.trim();
+                    },
+                  );
                 },
               ),
               SizedBox(height: 20),
               TextFormField(
                 obscureText: true,
-                decoration: InputDecoration(labelText: 'Password'),
+                decoration: InputDecoration(
+                  labelText: 'Senha',
+                  hintText: 'Mínimo 6 digitos',
+                ),
                 validator: (value) {
                   if (value!.length < 5 || value.isEmpty) {
                     return 'Senha Inválida';
                   }
                 },
                 onChanged: (value) {
-                  setState(() {
-                    _password = value.trim();
-                  });
+                  setState(
+                    () {
+                      _password = value.trim();
+                    },
+                  );
                 },
               ),
               SizedBox(height: 40),
@@ -107,12 +121,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       if (docs[index]['email'] == _email) {
                         if (docs[index]['senha'] == _password) {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => NotePage(
-                                        aluno: docs[index],
-                                        key: UniqueKey(),
-                                      ))).then(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => NotePage(
+                                aluno: docs[index],
+                                key: UniqueKey(),
+                              ),
+                            ),
+                          ).then(
                             (value) => {
                               if (value != null) {initialise()}
                             },
@@ -121,7 +137,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         }
                       }
                     }
-                    for (index = 0; index < docsp.length; index++) {
+                    for (var index = 0; index < docsp.length; index++) {
                       print(index);
                       if (docsp[index]['email'] == _email) {
                         if (docsp[index]['senha'] == _password) {

@@ -84,7 +84,7 @@ class _ViewState extends State<View> {
                 SizedBox(height: 20),
                 TextFormField(
                   decoration: inputDecoration("Senha"),
-                  controller: senhaController,    
+                  controller: senhaController,
                   validator: (value) {
                     Validador()
                         .add(Validar.OBRIGATORIO, msg: "Campo Obrigatório")
@@ -120,14 +120,13 @@ class _ViewState extends State<View> {
         onPressed: () {
           if (_key.currentState!.validate()) {
             widget.db.update(
-                widget.aluno['id'],
-                emailController.text,
-                nomeController.text,
-                senhaController.text,
-                double.parse(n1Controller.text),
-                double.parse(n2Controller.text),
-                
-                );
+              widget.aluno['id'],
+              emailController.text,
+              nomeController.text,
+              senhaController.text,
+              double.parse(n1Controller.text),
+              double.parse(n2Controller.text),
+            );
 
             ScaffoldMessenger.of(context)
                 .showSnackBar(SnackBar(content: Text('Dados Salvos')));

@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:grades/components/student_note.dart';
 import 'package:grades/home.dart';
 import 'package:grades/login.dart';
-import 'package:grades/view.dart';
-import 'add.dart';
-import 'database.dart';
 //import 'package:firebase_database/firebase_database.dart';
 
 Future<void> main() async {
@@ -29,7 +25,6 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => LoginScreen(),
         '/home': (context) => MyHomePage(title: 'GRADES'),
-        '/grade': (context) => NotePage(),
       },
     );
   }

@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:validadores/Validador.dart';
 import 'database.dart';
 
+// ignore: must_be_immutable
 class Add extends StatefulWidget {
   Add({Key? key, required this.db}) : super(key: key);
   Database db;

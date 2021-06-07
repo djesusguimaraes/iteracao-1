@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class NotePage extends StatelessWidget {
   NotePage({Key? key, required this.aluno}) : super(key: key);
   Map aluno;
@@ -53,20 +54,6 @@ class NotePage extends StatelessWidget {
               ),
             ),
           ],
-          // Align(
-          //   alignment: Alignment.centerLeft,
-          //   child: Text(
-          //     "Nota 1: " +
-          //         aluno['n1'].toString() +
-          //         "\nNota 2: " +
-          //         aluno['n2'].toString() +
-          //         "\nMédia Final: " +
-          //         ((aluno['n1'] + aluno['n2']) / 2).toString(),
-          //     style: TextStyle(
-          //       fontSize: 24,
-          //     ),
-          //   ),
-          // ),
         ),
       ),
     );
