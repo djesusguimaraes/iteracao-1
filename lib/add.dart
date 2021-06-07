@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:validadores/Validador.dart';
 import 'database.dart';
 
+// ignore: must_be_immutable
 class Add extends StatefulWidget {
   Add({Key? key, required this.db}) : super(key: key);
   Database db;
+
   @override
   _AddState createState() => _AddState();
 }
@@ -17,7 +20,9 @@ class _AddState extends State<Add> {
   TextEditingController senhaconfController = new TextEditingController();
   TextEditingController n1Controller = new TextEditingController();
   TextEditingController n2Controller = new TextEditingController();
+
   GlobalKey<FormState> _key = new GlobalKey();
+
   @override
   void initState() {
     super.initState();

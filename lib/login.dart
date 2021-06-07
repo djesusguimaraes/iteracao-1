@@ -14,12 +14,12 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  late String _email, _password;
-  final auth = FirebaseAuth.instance;
   GlobalKey<FormState> _key = new GlobalKey();
+  late String _email, _password;
   late Database db;
+  final auth = FirebaseAuth.instance;
   List docs = [], docsp = [];
-  var index = 0;
+
   initialise() {
     db = Database();
     db.initiliase();
@@ -121,8 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         }
                       }
                     }
-                    for (index = 0; index < docsp.length; index++) {
-                      print(index);
+                    for (var index = 0; index < docsp.length; index++) {
                       if (docsp[index]['email'] == _email) {
                         if (docsp[index]['senha'] == _password) {
                           Navigator.of(context).pushReplacementNamed('/home');
