@@ -13,4 +13,8 @@ Grupo 2:
 - Ítalo Vilarino
 - Marcos Antônio
 
+
+![Sistema](assets/logo.png)
+
+
 Versão Web disponível [aqui](https://djesusguimaraes.github.io/iteracao-1/).
